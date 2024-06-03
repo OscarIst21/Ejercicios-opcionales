@@ -87,6 +87,7 @@ public class Actividad15Memorama extends JFrame {
             botones[i].addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                	temporizador.start();
                     if (!puedePresionar) {
                         return;
                     }
@@ -172,7 +173,7 @@ public class Actividad15Memorama extends JFrame {
                 tiempo.setText("Tiempo: " + segundos);
             }
         });
-        temporizador.start();
+        temporizador.stop();
     }
 
     private int encontrarIndiceBoton(JButton button) {
